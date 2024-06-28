@@ -26,7 +26,9 @@ export default function Accordian() {
 			copiedMultiple.splice(indexOfCurrentID, 1);
 		}
 
-		console.log(indexOfCurrentID);
+		setMultiSelection(copiedMultiple);
+
+		console.log(selected, multiselection);
 	}
 
 	return (
@@ -55,9 +57,19 @@ export default function Accordian() {
 								<h3>{dataItem.question}</h3>
 								<span>+</span>
 							</div>
-							{selected === dataItem.id ? (
-								<div className="content">{dataItem.answer}</div>
-							) : null}
+							{enableMultiSelection
+								? // if multiselection is enabled, then we open the answer panel only if the id has not already been clicked (handleMultiSelection() first adds or removes this id when the enableMultiSelection btn is clicked)
+								  multiselection.includes(dataItem.id) && (
+										<div className="content">
+											{dataItem.answer}
+										</div>
+								  )
+								: // if multiselection isn't enabled, then we open the answer only if handleSingleSelection() has first added the clicked id as selected
+								  selected === dataItem.id && (
+										<div className="content">
+											{dataItem.answer}
+										</div>
+								  )}
 						</div>
 					))
 				) : (

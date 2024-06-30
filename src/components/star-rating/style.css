@@ -7,3 +7,8 @@
 .inactive {
 	color: #000;
 }
+
+.active,
+.inactive {
+	cursor: pointer;
+}

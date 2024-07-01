@@ -1,13 +1,34 @@
-import React from 'react';
+import React, {useReducer} from 'react';
 
-const arr = ['happy', 'sad', 'angry'];
+
+const reducer = (state, action) => {
+  switch(action.type){
+    case 'increase':
+      return {
+        count: state.count + 1,
+        arr: state.arr,
+        }
+     default:
+       return state; 
+  }
+}
+
+const initialScale = {
+  count: 0,
+  arr: []
+}
 
 const Test = () => {
-  let index = arr.indexOf('angry');
-  let newVar = arr[arr.length - 4]
-  console.log(index)
+  const [state, dispatch] = useReducer(reducer, initialScale)
+  const oldArr = [1, 2,3,4,5];
+  
+  
   return (
-    <h1>Test {index} {newVar}</h1>
+    <div>
+      <button onClick={()=>dispatch({type: 'increase'})}>Add</button> 
+      <span>{state.count}</span>
+      <span>{state.arr}</span>
+    </div>
   )
 }
 

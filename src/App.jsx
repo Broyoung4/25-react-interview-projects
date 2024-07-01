@@ -5,6 +5,8 @@ import Accordian from "./components/accordion";
 import ImageSlider from "./components/image-slider";
 import RandomColor from "./components/random-color-generator";
 import StarRating from "./components/star-rating";
+import Test from "./components/test/Test.jsx"
+
 
 function App() {
 	return (
@@ -24,6 +26,8 @@ function App() {
 				limit={10}
 				page={1}
 			/>
+			
+			<Test />
 		</div>
 	);
 }

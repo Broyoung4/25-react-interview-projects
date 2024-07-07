@@ -1,8 +1,9 @@
 /** @format */
 
 import "./App.css";
-import TreeView from "./components/tree-view";
-import { default as treeViewMenu } from "./components/tree-view/data";
+import QRCodeGenerator from "./components/qr-code-generator";
+// import TreeView from "./components/tree-view";
+// import { default as treeViewMenu } from "./components/tree-view/data";
 // import Accordian from "./components/accordion";
 // import ImageSlider from "./components/image-slider";
 // import RandomColor from "./components/random-color-generator";
@@ -32,7 +33,10 @@ export default function App() {
 			{/* <LoadMoreData /> */}
 
 			{/* Tree view component */}
-			<TreeView menus={treeViewMenu} />
+			{/* <TreeView menus={treeViewMenu} /> */}
+
+			{/* QR Code Generator */}
+			<QRCodeGenerator />
 		</div>
 	);
 }

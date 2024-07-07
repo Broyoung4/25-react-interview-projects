@@ -1,7 +1,8 @@
 /** @format */
 
 import "./App.css";
-import QRCodeGenerator from "./components/qr-code-generator";
+import LIghtDarkMode from "./components/light-dark-mode";
+// import QRCodeGenerator from "./components/qr-code-generator";
 // import TreeView from "./components/tree-view";
 // import { default as treeViewMenu } from "./components/tree-view/data";
 // import Accordian from "./components/accordion";
@@ -36,7 +37,10 @@ export default function App() {
 			{/* <TreeView menus={treeViewMenu} /> */}
 
 			{/* QR Code Generator */}
-			<QRCodeGenerator />
+			{/* <QRCodeGenerator /> */}
+
+			{/* Light and dark theme switch */}
+			<LIghtDarkMode />
 		</div>
 	);
 }

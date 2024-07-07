@@ -7,6 +7,8 @@ import "./App.css";
 // import StarRating from "./components/star-rating";
 import LoadMoreData from "./components/load-more-data";
 
+
+
 function App() {
 	return (
 		<div className="App">
@@ -24,6 +26,10 @@ function App() {
 				url={"https://picsum.photos/v2/list"}
 				limit={10}
 				page={1}
+
+			/>
+			
+			
 			/> */}
 
 			{/* load more products component */}

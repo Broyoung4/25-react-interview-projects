@@ -75,7 +75,8 @@ export default function RandomColor() {
 						? handleCreateHEXColor
 						: handleCreateRGBColor
 				}>
-				Generate Randmon Color
+				
+				Generate Random Color
 			</button>
 			<div
 				style={{
@@ -92,6 +93,7 @@ export default function RandomColor() {
 				<h1
 					style={{
 						marginTop: 0,
+						fontSize: '30px'
 					}}>
 					{color}
 				</h1>

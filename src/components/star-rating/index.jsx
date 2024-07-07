@@ -1,25 +1,13 @@
 /** @format */
-import { useState } from "react";
+import { useReducer } from "react";
 import { FaStar } from "react-icons/fa";
+import { starsInitialState, starsReducer } from "../Reducer";
 import "./style.css";
 
 export default function StarRating({ noOfStars }) {
-	const [rating, setRating] = useState(0);
-
-	const [hover, setHover] = useState(0);
-
-	function handleClick(currentIndex) {
-		setRating(currentIndex);
-	}
-
-	function handleMouseMove(currentIndex) {
-		setHover(currentIndex);
-	}
-
-	function handleMouseLeave() {
-		// When the mouse leaves, the hovered elements should return be the elements that have been rated (by onClick)
-		setHover(rating);
-	}
+	//initializing useReducer states
+	const [state, dispatch] = useReducer(starsReducer, starsInitialState);
+	const { rating, hover } = state;
 
 	return (
 		<div
@@ -37,9 +25,15 @@ export default function StarRating({ noOfStars }) {
 							index <= (hover || rating) ? "active" : "inactive"
 						}
 						key={index}
-						onClick={() => handleClick(index)}
-						onMouseMove={() => handleMouseMove(index)}
-						onMouseLeave={() => handleMouseLeave()}
+						onClick={() =>
+							dispatch({ type: "handlerating", payload: index })
+						}
+						onMouseMove={() =>
+							dispatch({ type: "handlehover", payload: index })
+						}
+						onMouseLeave={() =>
+							dispatch({ type: "handlehover", payload: rating })
+						}
 						size={40}
 					/>
 				);

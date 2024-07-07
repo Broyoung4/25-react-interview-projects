@@ -1,10 +1,11 @@
 /** @format */
 
 import "./App.css";
-import Accordian from "./components/accordion";
-import ImageSlider from "./components/image-slider";
-import RandomColor from "./components/random-color-generator";
-import StarRating from "./components/star-rating";
+// import Accordian from "./components/accordion";
+// import ImageSlider from "./components/image-slider";
+// import RandomColor from "./components/random-color-generator";
+// import StarRating from "./components/star-rating";
+import LoadMoreData from "./components/load-more-data";
 
 
 
@@ -12,22 +13,27 @@ function App() {
 	return (
 		<div className="App">
 			{/* Accordian component */}
-			<Accordian />
+			{/* <Accordian /> */}
 
 			{/* Random Color component */}
-			<RandomColor />
+			{/* <RandomColor /> */}
 
 			{/* Star rating component */}
-			<StarRating noOfStars={10} />
+			{/* <StarRating noOfStars={10} /> */}
 
 			{/* Image Slider component */}
-			<ImageSlider
+			{/* <ImageSlider
 				url={"https://picsum.photos/v2/list"}
 				limit={10}
 				page={1}
+
 			/>
 			
 			
+			/> */}
+
+			{/* load more products component */}
+			<LoadMoreData />
 		</div>
 	);
 }

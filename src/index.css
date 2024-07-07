@@ -25,7 +25,6 @@
 
 * {
 	box-sizing: border-box;
-
 }
 
 a {
@@ -43,8 +42,6 @@ body {
 	place-items: center;
 	min-width: 320px;
 	min-height: 100vh;
-
-
 }
 
 h1 {
@@ -79,7 +76,6 @@ button:focus-visible {
 	outline: 4px auto -webkit-focus-ring-color;
 }
 
-
 /*@media (prefers-color-scheme: light) {
   :root {
     color: #213547;
@@ -92,4 +88,3 @@ button:focus-visible {
     background-color: #f9f9f9;
   }
 }*/
-

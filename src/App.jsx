@@ -1,8 +1,9 @@
 /** @format */
 
 import "./App.css";
+import TabParent from "./components/custom-tabs/tab-parent";
 // import LIghtDarkMode from "./components/light-dark-mode";
-import ScrollIndicator from "./components/scroll-indicator";
+// import ScrollIndicator from "./components/scroll-indicator";
 // import QRCodeGenerator from "./components/qr-code-generator";
 // import TreeView from "./components/tree-view";
 // import { default as treeViewMenu } from "./components/tree-view/data";
@@ -45,7 +46,10 @@ export default function App() {
 			 */}
 
 			{/* scroll indicator */}
-			<ScrollIndicator url={"https://dummyjson.com/products?limit=100"} />
+			{/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
+
+			{/* Tab Switcher Component */}
+			<TabParent />
 		</div>
 	);
 }

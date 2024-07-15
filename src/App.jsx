@@ -1,7 +1,8 @@
 /** @format */
 
 import "./App.css";
-import TabParent from "./components/custom-tabs/tab-parent";
+import ModalParent from "./components/custom-modal-popup/modal-parent";
+// import TabParent from "./components/custom-tabs/tab-parent";
 // import LIghtDarkMode from "./components/light-dark-mode";
 // import ScrollIndicator from "./components/scroll-indicator";
 // import QRCodeGenerator from "./components/qr-code-generator";
@@ -49,7 +50,10 @@ export default function App() {
 			{/* <ScrollIndicator url={"https://dummyjson.com/products?limit=100"} /> */}
 
 			{/* Tab Switcher Component */}
-			<TabParent />
+			{/* <TabParent /> */}
+
+			{/* Custom Modal component */}
+			<ModalParent />
 		</div>
 	);
 }

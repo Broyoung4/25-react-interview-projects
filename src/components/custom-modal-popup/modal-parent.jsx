@@ -6,6 +6,8 @@ import "./modal.css";
 
 export default function ModalParent() {
 	const [isModalPopedUp, setIsModalPopedUp] = useState(false);
+	// create modalRef for handling outside modal click events
+	const modalRef = useRef(null);
 
 	function handleToggleModalPopup() {
 		setIsModalPopedUp((prevState) => !prevState);
@@ -19,9 +21,6 @@ export default function ModalParent() {
 		if (modalRef.current && !modalRef.current.contains(event.target))
 			handleOnClose();
 	}
-
-	// create modalRef for handling outside modal click events
-	const modalRef = useRef(null);
 
 	// create a useEffect for handling outside modal click events
 	useEffect(() => {

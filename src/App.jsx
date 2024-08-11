@@ -1,7 +1,8 @@
 /** @format */
 
 import "./App.css";
-import ModalParent from "./components/custom-modal-popup/modal-parent";
+import GitHubUserSearch from "./components/github-profile-finder";
+// import ModalParent from "./components/custom-modal-popup/modal-parent";
 // import TabParent from "./components/custom-tabs/tab-parent";
 // import LIghtDarkMode from "./components/light-dark-mode";
 // import ScrollIndicator from "./components/scroll-indicator";
@@ -53,7 +54,10 @@ export default function App() {
 			{/* <TabParent /> */}
 
 			{/* Custom Modal component */}
-			<ModalParent />
+			{/* <ModalParent /> */}
+
+			{/* GitHub profile finder */}
+			<GitHubUserSearch />
 		</div>
 	);
 }

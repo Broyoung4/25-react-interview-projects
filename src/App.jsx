@@ -1,7 +1,8 @@
 /** @format */
 
 import "./App.css";
-import GitHubUserSearch from "./components/github-profile-finder";
+import SearchAutoComplete from "./components/search-auto-complete-with-api";
+// import GitHubUserSearch from "./components/github-profile-finder";
 // import ModalParent from "./components/custom-modal-popup/modal-parent";
 // import TabParent from "./components/custom-tabs/tab-parent";
 // import LIghtDarkMode from "./components/light-dark-mode";
@@ -57,7 +58,10 @@ export default function App() {
 			{/* <ModalParent /> */}
 
 			{/* GitHub profile finder */}
-			<GitHubUserSearch />
+			{/* <GitHubUserSearch /> */}
+
+			{/* Search auto complete */}
+			<SearchAutoComplete />
 		</div>
 	);
 }

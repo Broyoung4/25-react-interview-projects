@@ -1,0 +1,17 @@
+/** @format */
+
+ul {
+	list-style: none;
+}
+
+li {
+	cursor: pointer;
+	width: fit-content;
+	transition: all 0.25s ease-in-out;
+}
+
+li:hover {
+	color: lightgreen;
+	transform: scale(1.2);
+	font-weight: bold;
+}

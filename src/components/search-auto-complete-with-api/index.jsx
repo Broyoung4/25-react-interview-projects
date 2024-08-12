@@ -11,6 +11,13 @@ export default function SearchAutoComplete() {
 	const [showDropdown, setShowDropdown] = useState(false);
 	const [filteredUsers, setFilteredUsers] = useState([]);
 
+	function handleSuggestionClick(event) {
+		// put the clicked suggestion as the typed in value in the input field
+		setSearchParam(event.target.textContent);
+		setShowDropdown(false);
+		setFilteredUsers([]);
+	}
+
 	function handleInputChange(event) {
 		const query = event.target.value.toLowerCase();
 		setSearchParam(query);
@@ -58,7 +65,12 @@ export default function SearchAutoComplete() {
 	return (
 		<div className="search-autocomplete-container">
 			{loading ? (
-				<h1>Loading suggestions ...</h1>
+				<h1
+					style={{
+						fontSize: "1.2rem",
+					}}>
+					Loading suggestions ...
+				</h1>
 			) : (
 				<input
 					type="text"
@@ -69,7 +81,12 @@ export default function SearchAutoComplete() {
 				/>
 			)}
 
-			{showDropdown && <Suggestions data={filteredUsers} />}
+			{showDropdown && (
+				<Suggestions
+					handleSuggestionClick={handleSuggestionClick}
+					data={filteredUsers}
+				/>
+			)}
 		</div>
 	);
 }

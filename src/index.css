@@ -62,16 +62,16 @@ button {
 	cursor: pointer;
 	transition: border-color 0.25s;
 }
-button:is(:hover, :focus) {
+button:is(:hover) {
 	outline: 2px solid blue;
 	background-color: #1a1a1a;
 	cursor: pointer;
-	transition: border-color 0.25s;
+	transition: all 0.25s ease-in-out;
 }
 
 button:focus,
 button:focus-visible {
-	outline: 4px auto -webkit-focus-ring-color;
+	outline: 2px solid blue;
 }
 button:disabled {
 	cursor: not-allowed;

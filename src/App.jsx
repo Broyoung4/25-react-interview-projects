@@ -1,7 +1,8 @@
 /** @format */
 
 import "./App.css";
-import SearchAutoComplete from "./components/search-auto-complete-with-api";
+import TicTacToe from "./components/tic-tac-toe";
+// import SearchAutoComplete from "./components/search-auto-complete-with-api";
 // import GitHubUserSearch from "./components/github-profile-finder";
 // import ModalParent from "./components/custom-modal-popup/modal-parent";
 // import TabParent from "./components/custom-tabs/tab-parent";
@@ -61,7 +62,10 @@ export default function App() {
 			{/* <GitHubUserSearch /> */}
 
 			{/* Search auto complete */}
-			<SearchAutoComplete />
+			{/* <SearchAutoComplete /> */}
+
+			{/* Tic Tac Toe game */}
+			<TicTacToe />
 		</div>
 	);
 }
